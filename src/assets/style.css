@@ -146,25 +146,33 @@ input[type="number"] {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-.update-btn {
-  cursor: pointer;
-  background-color: #3c83e7;
-  border: 0;
-  color: #fff;
-  font-size: 20px;
-  line-height: 20px;
-  padding: 2px 5px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(2770%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 
 .list li:hover .delete-btn {
   opacity: 1;
 }
-.list li:hover .update-btn {
-  opacity: 1;
+
+
+/* Media query for screen sizes less than 400px */
+@media (max-width: 400px) {
+  body {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+
+  .container {
+    width: 100%; /* Make the container full width for smaller screens */
+  }
+  .delete-btn {
+    opacity: 1;
+  }
+}
+
+/* Media query for screen sizes greater than 420px */
+@media (min-width: 421px) {
+  body {
+    font-size: 20px; /* Adjust font size for larger screens */
+  }
+
+  .container {
+    width: 100%; /* Set a maximum width for the container on larger screens */
+  }
 }
